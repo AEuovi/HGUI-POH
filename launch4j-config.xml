@@ -1,0 +1,26 @@
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>target/passport-office-helper-2.0.jar</jar>
+  <outfile>dist/POH.exe</outfile>
+  <errTitle>POH Error</errTitle>
+  <cmdLine />
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>https://adoptium.net</downloadUrl>
+
+  <!-- Point to your JRE (or ship one) -->
+  <bundleJrePath>jre</bundleJrePath>
+  <minVersion>17</minVersion>
+
+  <!-- VM arguments to add JavaFX -->
+  <jvmOptions>
+    <jvmOption>--module-path</jvmOption>
+    <jvmOption>javafx-sdk/lib</jvmOption>
+    <jvmOption>--add-modules</jvmOption>
+    <jvmOption>javafx.controls,javafx.graphics</jvmOption>
+  </jvmOptions>
+
+  <customProcName>true</customProcName>
+  <stayAlive>true</stayAlive>
+</launch4jConfig>
